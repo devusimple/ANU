@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Anamika Yasmin - Professional Digital Marketer & Freelancer in Bangladesh. SEO, Social Media Marketing, Meta Ads, Email Marketing. Let's grow your business online!">
-    <meta name="keywords" content="digital marketer, freelancer, SEO, social media marketing, meta ads, email marketing, Bangladesh, Dhaka">
+    <meta name="description" content="Anamika Yasmin - Data-Driven Digital Marketer & Growth Strategist in Dhaka, Bangladesh. SEO, Social Media Marketing, Meta Ads, Email Marketing. Serving clients globally.">
+    <meta name="keywords" content="digital marketer, freelancer, SEO, social media marketing, meta ads, email marketing, Bangladesh, Dhaka, growth strategist">
     <meta name="author" content="Anamika Yasmin">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#2dd4a8">
@@ -12,18 +12,18 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anamikayasmin.com/">
-    <meta property="og:title" content="Anamika Yasmin | Digital Marketer & Freelancer">
-    <meta property="og:description" content="Professional Digital Marketer & Freelancer in Bangladesh. SEO, Social Media Marketing, Meta Ads, Email Marketing.">
+    <meta property="og:title" content="Anamika Yasmin | Data-Driven Digital Marketer & Growth Strategist">
+    <meta property="og:description" content="Data-Driven Digital Marketer & Growth Strategist in Dhaka, Bangladesh. SEO, Social Media Marketing, Meta Ads, Email Marketing.">
     <meta property="og:image" content="images/profile.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://anamikayasmin.com/">
-    <meta name="twitter:title" content="Anamika Yasmin | Digital Marketer & Freelancer">
-    <meta name="twitter:description" content="Professional Digital Marketer & Freelancer in Bangladesh. SEO, Social Media Marketing, Meta Ads, Email Marketing.">
+    <meta name="twitter:title" content="Anamika Yasmin | Data-Driven Digital Marketer & Growth Strategist">
+    <meta name="twitter:description" content="Data-Driven Digital Marketer & Growth Strategist in Dhaka, Bangladesh. SEO, Social Media Marketing, Meta Ads, Email Marketing.">
     <meta name="twitter:image" content="images/profile.png">
 
-    <title>Anamika Yasmin | Digital Marketer & Freelancer | SEO, SMM, Meta Ads</title>
+    <title>Anamika Yasmin | Data-Driven Digital Marketer & Growth Strategist | Dhaka, Bangladesh</title>
 
     <link rel="canonical" href="https://anamikayasmin.com/">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -40,10 +40,10 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Person",
+        "@type": "ProfessionalService",
         "name": "Anamika Yasmin",
-        "jobTitle": "Digital Marketer",
-        "description": "Professional Digital Marketer & Freelancer specializing in SEO, Social Media Marketing, Meta Ads, and Email Marketing.",
+        "jobTitle": "Digital Marketer & Growth Strategist",
+        "description": "Data-Driven Digital Marketer & Growth Strategist specializing in SEO, Social Media Marketing, Meta Ads, and Email Marketing.",
         "url": "https://anamikayasmin.com",
         "image": "images/profile.png",
         "email": "anamikayasmin6@gmail.com",
@@ -51,8 +51,10 @@
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Dhaka",
+            "addressRegion": "Dhaka",
             "addressCountry": "BD"
         },
+        "areaServed": ["Dhaka", "Bangladesh", "Global"],
         "sameAs": [
             "https://www.facebook.com/anamikayasminofficial",
             "https://www.linkedin.com/in/anamikayasminofficial",
@@ -60,7 +62,7 @@
             "https://www.tiktok.com/@anamika.yasmin",
             "https://www.youtube.com/@Anamikayasminofficial"
         ],
-        "knowsAbout": ["Digital Marketing", "SEO", "Social Media Marketing", "Meta Ads", "Email Marketing", "PPC", "Content Marketing", "Lead Generation"]
+        "knowsAbout": ["Digital Marketing", "SEO", "Social Media Marketing", "Meta Ads", "Email Marketing", "PPC", "Content Marketing", "Lead Generation", "Growth Strategy"]
     }
     </script>
     <script>
@@ -98,6 +100,11 @@
             0%, 100% { transform: rotate(0deg); }
             25% { transform: rotate(20deg); }
             75% { transform: rotate(-10deg); }
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.4); opacity: 0; }
         }
 
         .animate-morph { animation: morph 8s ease-in-out infinite; }
@@ -156,6 +163,57 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+        }
+        .whatsapp-float::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #25D366;
+            animation: pulse-ring 1.5s infinite;
+            z-index: -1;
+        }
+
+        /* Sticky CTA for mobile */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 998;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            padding: 12px 16px;
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .sticky-cta { display: block; }
+            .whatsapp-float { bottom: 80px; }
+        }
+
+        /* Counter animation */
+        .counter { display: inline-block; }
     </style>
 </head>
 <body class="bg-white text-gray-800 overflow-x-hidden">
@@ -178,9 +236,14 @@
                     <li><a href="#contact" class="nav-link text-sm font-medium text-gray-700 hover:text-primary transition">Contact</a></li>
                 </ul>
 
-                <a href="#contact" class="hidden md:flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-primary-dark transition hover:shadow-lg hover:shadow-primary/30">
-                    Let's Talk <i class="fas fa-paper-plane text-xs"></i>
-                </a>
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="https://www.linkedin.com/in/anamikayasminofficial" target="_blank" class="w-9 h-9 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition">
+                        <i class="fab fa-linkedin-in text-sm"></i>
+                    </a>
+                    <a href="#contact" class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-primary-dark transition hover:shadow-lg hover:shadow-primary/30">
+                        Book a Call <i class="fas fa-calendar text-xs"></i>
+                    </a>
+                </div>
 
                 <button id="menuBtn" class="md:hidden w-11 h-11 flex items-center justify-center rounded-lg hover:bg-gray-100 transition">
                     <i class="fas fa-bars text-xl text-gray-800" id="menuIcon"></i>
@@ -198,7 +261,8 @@
                 <a href="#process" class="block text-sm font-medium text-gray-700 hover:text-primary hover:bg-primary-light px-4 py-3 rounded-lg transition">Process</a>
                 <a href="#testimonials" class="block text-sm font-medium text-gray-700 hover:text-primary hover:bg-primary-light px-4 py-3 rounded-lg transition">Testimonials</a>
                 <a href="#contact" class="block text-sm font-medium text-gray-700 hover:text-primary hover:bg-primary-light px-4 py-3 rounded-lg transition">Contact</a>
-                <a href="#contact" class="flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-full text-sm font-semibold mt-4 hover:bg-primary-dark transition">Let's Talk <i class="fas fa-paper-plane text-xs"></i></a>
+                <a href="https://www.linkedin.com/in/anamikayasminofficial" target="_blank" class="flex items-center gap-2 text-blue-600 px-4 py-3 rounded-lg transition font-medium text-sm"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                <a href="#contact" class="flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-full text-sm font-semibold mt-4 hover:bg-primary-dark transition">Book a Call <i class="fas fa-calendar text-xs"></i></a>
             </div>
         </div>
     </nav>
@@ -213,16 +277,16 @@
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-3">
                         Anamika <span class="text-primary">Yasmin</span>
                     </h1>
-                    <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-primary mb-5">Digital Marketer <span class="text-secondary">&#x2764;&#xFE0F;</span></h2>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-primary mb-5">Data-Driven Digital Marketer & Growth Strategist</h2>
                     <p class="text-gray-500 text-base md:text-lg max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed">
-                        I craft data-driven digital strategies that boost brand visibility, engagement, and conversions. Let's grow your business online!
+                        I craft data-driven digital strategies that boost brand visibility, engagement, and conversions. Serving clients in <strong class="text-gray-700">Dhaka & globally</strong>.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                        <a href="#work" class="flex items-center justify-center gap-2 bg-primary text-white px-7 py-3.5 rounded-full font-semibold hover:bg-primary-dark transition hover:shadow-lg hover:shadow-primary/30">
-                            View My Work <i class="fas fa-arrow-right text-sm"></i>
+                        <a href="#contact" class="flex items-center justify-center gap-2 bg-primary text-white px-7 py-3.5 rounded-full font-semibold hover:bg-primary-dark transition hover:shadow-lg hover:shadow-primary/30">
+                            Book a Free Strategy Call <i class="fas fa-calendar text-sm"></i>
                         </a>
-                        <a href="#" class="flex items-center justify-center gap-2 bg-white text-gray-700 px-7 py-3.5 rounded-full font-semibold border-2 border-primary hover:bg-primary-light transition">
-                            Download Resume <i class="fas fa-download text-sm"></i>
+                        <a href="#work" class="flex items-center justify-center gap-2 bg-white text-gray-700 px-7 py-3.5 rounded-full font-semibold border-2 border-primary hover:bg-primary-light transition">
+                            View My Work <i class="fas fa-arrow-right text-sm"></i>
                         </a>
                     </div>
                     <div class="flex items-center gap-4 justify-center lg:justify-start">
@@ -232,7 +296,6 @@
                             <a href="https://www.linkedin.com/in/anamikayasminofficial" target="_blank" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition shadow-sm hover:shadow-md"><i class="fab fa-linkedin-in text-sm"></i></a>
                             <a href="https://www.instagram.com/anamikayasminofficial" target="_blank" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition shadow-sm hover:shadow-md"><i class="fab fa-instagram text-sm"></i></a>
                             <a href="https://www.tiktok.com/@anamika.yasmin" target="_blank" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition shadow-sm hover:shadow-md"><i class="fab fa-tiktok text-sm"></i></a>
-                            <a href="https://wa.me/8801811805342" target="_blank" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition shadow-sm hover:shadow-md"><i class="fab fa-whatsapp text-sm"></i></a>
                         </div>
                     </div>
                 </div>
@@ -240,67 +303,102 @@
                 <!-- Image -->
                 <div class="relative flex justify-center order-1 lg:order-2">
                     <div class="relative">
-                        <!-- Main Image -->
                         <div class="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 animate-morph overflow-hidden shadow-2xl shadow-primary/20">
-                            <img src="images/profile.png" alt="Anamika Yasmin" class="w-full h-full object-cover">
+                            <img src="images/profile.png" alt="Anamika Yasmin - Digital Marketer in Dhaka, Bangladesh" class="w-full h-full object-cover">
                         </div>
-
-                        <!-- Experience Badge -->
                         <div class="absolute -top-2 -right-4 sm:top-4 sm:-right-6 bg-white px-4 py-3 rounded-2xl shadow-xl flex flex-col items-center text-center z-10">
                             <span class="text-xl">&#x2B50;</span>
                             <span class="text-2xl font-extrabold text-primary">5+</span>
                             <span class="text-[10px] text-gray-500 leading-tight">Years of<br>Experience</span>
                         </div>
-
-                        <!-- Floating Card -->
                         <div class="absolute -bottom-4 -left-6 sm:bottom-8 sm:-left-8 bg-white px-5 py-4 rounded-2xl shadow-xl max-w-[200px] animate-float z-10">
                             <p class="text-sm text-gray-600 leading-snug">I turn ideas into <strong class="text-primary">digital success stories</strong></p>
-                            <span class="text-right block mt-1">&#x2764;&#xFE0F;</span>
                         </div>
-
-                        <!-- Decorative Shapes -->
                         <div class="absolute -top-8 -left-8 w-24 h-24 bg-primary/10 rounded-full blur-xl"></div>
                         <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-primary/10 rounded-full blur-xl"></div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Background Shapes -->
         <div class="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="py-8 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl md:text-4xl font-extrabold text-primary counter" data-target="25">0</span>
+                    <span class="text-gray-500 text-sm mt-1">Happy Clients</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl md:text-4xl font-extrabold text-primary counter" data-target="50">0</span>
+                    <span class="text-gray-500 text-sm mt-1">Projects Completed</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl md:text-4xl font-extrabold text-primary">$<span class="counter" data-target="50">0</span>k+</span>
+                    <span class="text-gray-500 text-sm mt-1">Ad Spend Managed</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl md:text-4xl font-extrabold text-primary"><span class="counter" data-target="4">0</span>.8x</span>
+                    <span class="text-gray-500 text-sm mt-1">Average ROAS</span>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-100">
+                <p class="text-center text-gray-400 text-xs uppercase tracking-widest mb-4">Certified & Trusted</p>
+                <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 opacity-60">
+                    <div class="flex items-center gap-2 text-gray-500">
+                        <i class="fab fa-google text-lg"></i>
+                        <span class="text-sm font-medium">Google Analytics</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-500">
+                        <i class="fab fa-meta text-lg"></i>
+                        <span class="text-sm font-medium">Meta Blueprint</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-500">
+                        <i class="fas fa-certificate text-lg"></i>
+                        <span class="text-sm font-medium">HubSpot Certified</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-500">
+                        <i class="fab fa-google text-lg"></i>
+                        <span class="text-sm font-medium">Google Ads</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About <span class="text-primary">Me</span> <span class="text-secondary">&#x2764;&#xFE0F;</span></h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About <span class="text-primary">Me</span></h2>
             <div class="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
                 <div class="lg:col-span-2 flex justify-center">
                     <div class="w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden shadow-xl shadow-primary/10">
-                        <img src="images/about.png" alt="About Anamika" class="w-full h-full object-cover">
+                        <img src="images/about.png" alt="About Anamika Yasmin - Digital Marketer" class="w-full h-full object-cover">
                     </div>
                 </div>
                 <div class="lg:col-span-3">
                     <p class="text-gray-500 text-base md:text-lg leading-relaxed mb-8">
-                        I'm a passionate digital marketer and freelancer who loves creating impactful online strategies. With a strong analytical mindset and a creative approach, I help brands connect with their audience and achieve measurable growth.
+                        I'm a passionate digital marketer and growth strategist who loves creating impactful online strategies. With a strong analytical mindset and a creative approach, I help brands in Dhaka and globally connect with their audience and achieve measurable growth.
                     </p>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="tag flex items-center gap-3 p-4 bg-gray-50 rounded-xl transition cursor-default">
                             <i class="fas fa-map-marker-alt text-secondary text-lg"></i>
-                            <span class="text-sm font-medium text-gray-700">Based in<br>Bangladesh</span>
+                            <span class="text-sm font-medium text-gray-700">Based in<br>Dhaka, Bangladesh</span>
                         </div>
                         <div class="tag flex items-center gap-3 p-4 bg-gray-50 rounded-xl transition cursor-default">
                             <i class="fas fa-graduation-cap text-secondary text-lg"></i>
                             <span class="text-sm font-medium text-gray-700">B.Des in Digital<br>Marketing</span>
                         </div>
                         <div class="tag flex items-center gap-3 p-4 bg-gray-50 rounded-xl transition cursor-default">
-                            <i class="fas fa-heart text-secondary text-lg"></i>
+                            <i class="fas fa-chart-line text-secondary text-lg"></i>
                             <span class="text-sm font-medium text-gray-700">Obsessed with<br>data-driven results</span>
                         </div>
                         <div class="tag flex items-center gap-3 p-4 bg-gray-50 rounded-xl transition cursor-default">
-                            <i class="fas fa-coffee text-secondary text-lg"></i>
-                            <span class="text-sm font-medium text-gray-700">Coffee lover &<br>content creator</span>
+                            <i class="fas fa-users text-secondary text-lg"></i>
+                            <span class="text-sm font-medium text-gray-700">Serving clients<br>globally</span>
                         </div>
                     </div>
                 </div>
@@ -311,7 +409,7 @@
     <!-- Services Section -->
     <section id="services" class="py-16 md:py-24 bg-gradient-to-b from-primary-light/50 to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">What <span class="text-primary">I Do</span> <span class="text-secondary">&#x2764;&#xFE0F;</span></h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">What <span class="text-primary">I Do</span></h2>
             <p class="text-gray-500 text-center mb-12 max-w-xl mx-auto">End-to-end digital marketing solutions to grow your brand.</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
                 <div class="service-card bg-white p-6 md:p-7 rounded-2xl text-center shadow-md hover:shadow-xl transition-all duration-300">
@@ -356,47 +454,49 @@
     <!-- Work Section -->
     <section id="work" class="py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Selected <span class="text-primary">Work</span> <span class="text-secondary">&#x2764;&#xFE0F;</span></h2>
-            <p class="text-gray-500 text-center mb-12">A few projects I'm proud of.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Selected <span class="text-primary">Work</span></h2>
+            <p class="text-gray-500 text-center mb-12">Real results from real campaigns.</p>
 
             <div class="relative">
                 <div id="workSlider" class="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide" style="scrollbar-width: none; -ms-overflow-style: none;">
                     <div class="work-card flex-shrink-0 w-[300px] sm:w-[340px] bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-center">
-                        <div class="h-48 overflow-hidden">
-                            <img src="images/work1.jpg" alt="E-Commerce SEO Campaign - Digital Marketing Case Study" class="work-img w-full h-full object-cover">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/work1.jpg" alt="E-Commerce SEO Campaign - 150% Organic Traffic Growth" class="work-img w-full h-full object-cover">
+                            <div class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">+150% Traffic</div>
                         </div>
                         <div class="p-5">
                             <h3 class="font-semibold text-gray-800 mb-1">E-Commerce SEO Campaign</h3>
                             <p class="text-primary text-xs font-medium mb-2">SEO & Content Marketing</p>
-                            <p class="text-gray-500 text-sm leading-relaxed mb-4">A comprehensive SEO strategy that increased organic traffic by 150% for a fashion brand.</p>
-                            <a href="#" class="text-secondary text-sm font-semibold hover:text-primary transition">View Case Study <i class="fas fa-arrow-right text-xs"></i></a>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-4">Comprehensive SEO strategy that increased organic traffic by 150% for a fashion brand.</p>
+                            <a href="#contact" class="text-secondary text-sm font-semibold hover:text-primary transition">Read Summary <i class="fas fa-arrow-right text-xs"></i></a>
                         </div>
                     </div>
                     <div class="work-card flex-shrink-0 w-[300px] sm:w-[340px] bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-center">
-                        <div class="h-48 overflow-hidden">
-                            <img src="images/work2.jpg" alt="Restaurant Social Media Marketing Campaign" class="work-img w-full h-full object-cover">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/work2.jpg" alt="Restaurant Social Media Campaign - 200% Bookings Growth" class="work-img w-full h-full object-cover">
+                            <div class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">+200% Bookings</div>
                         </div>
                         <div class="p-5">
                             <h3 class="font-semibold text-gray-800 mb-1">Restaurant Social Campaign</h3>
                             <p class="text-primary text-xs font-medium mb-2">Social Media Marketing</p>
-                            <p class="text-gray-500 text-sm leading-relaxed mb-4">A viral social media campaign that boosted restaurant bookings by 200% in 3 months.</p>
-                            <a href="#" class="text-secondary text-sm font-semibold hover:text-primary transition">View Case Study <i class="fas fa-arrow-right text-xs"></i></a>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-4">Viral social media campaign that boosted restaurant bookings by 200% in 3 months.</p>
+                            <a href="#contact" class="text-secondary text-sm font-semibold hover:text-primary transition">Read Summary <i class="fas fa-arrow-right text-xs"></i></a>
                         </div>
                     </div>
                     <div class="work-card flex-shrink-0 w-[300px] sm:w-[340px] bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-center">
-                        <div class="h-48 overflow-hidden">
-                            <img src="images/work3.jpg" alt="HealthTech Lead Generation Campaign" class="work-img w-full h-full object-cover">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/work3.jpg" alt="HealthTech Lead Generation - 500+ Qualified Leads" class="work-img w-full h-full object-cover">
+                            <div class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">500+ Leads</div>
                         </div>
                         <div class="p-5">
                             <h3 class="font-semibold text-gray-800 mb-1">HealthTech Lead Gen</h3>
                             <p class="text-primary text-xs font-medium mb-2">Meta Ads & Email Marketing</p>
-                            <p class="text-gray-500 text-sm leading-relaxed mb-4">A lead generation campaign that generated 500+ qualified leads for a health startup.</p>
-                            <a href="#" class="text-secondary text-sm font-semibold hover:text-primary transition">View Case Study <i class="fas fa-arrow-right text-xs"></i></a>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-4">Lead generation campaign that generated 500+ qualified leads for a health startup.</p>
+                            <a href="#contact" class="text-secondary text-sm font-semibold hover:text-primary transition">Read Summary <i class="fas fa-arrow-right text-xs"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Carousel Buttons -->
                 <button id="prevBtn" class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 w-12 h-12 rounded-full border-2 border-primary bg-white items-center justify-center text-primary hover:bg-primary hover:text-white transition shadow-lg z-10">
                     <i class="fas fa-chevron-left text-sm"></i>
                 </button>
@@ -410,7 +510,7 @@
     <!-- Process Section -->
     <section id="process" class="py-16 md:py-24 bg-gradient-to-b from-white to-primary-light/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">My <span class="text-primary">Process</span> <span class="text-secondary">&#x2764;&#xFE0F;</span></h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">My <span class="text-primary">Process</span></h2>
             <p class="text-gray-500 text-center mb-16 max-w-xl mx-auto">A clear and collaborative approach from idea to impact.</p>
 
             <div class="relative">
@@ -472,14 +572,14 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">What <span class="text-primary">Clients Say</span> <span class="text-secondary">&#x2764;&#xFE0F;</span></h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">What <span class="text-primary">Clients Say</span></h2>
             <div class="grid md:grid-cols-3 gap-6 md:gap-8">
                 <div class="testimonial-card bg-white p-6 md:p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
                     <i class="fas fa-quote-left text-primary/40 text-3xl mb-4 block"></i>
                     <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-6 italic">"Anamika transformed our online presence completely. Her SEO strategies doubled our organic traffic in just 4 months. Highly recommended!"</p>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                            <img src="images/client1.jpg" alt="Rafiq Ahmed" class="w-full h-full object-cover">
+                            <img src="images/client1.jpg" alt="Rafiq Ahmed - Founder, FashionHub" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-semibold text-gray-800 text-sm">Rafiq Ahmed</h4>
@@ -499,7 +599,7 @@
                     <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-6 italic">"Anamika is creative, data-driven, and incredibly professional. Her social media campaigns helped us reach thousands of new customers."</p>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                            <img src="images/client2.jpg" alt="Nusrat Jahan" class="w-full h-full object-cover">
+                            <img src="images/client2.jpg" alt="Nusrat Jahan - CEO, TechStart BD" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-semibold text-gray-800 text-sm">Nusrat Jahan</h4>
@@ -519,7 +619,7 @@
                     <p class="text-gray-500 text-sm md:text-base leading-relaxed mb-6 italic">"She goes above and beyond to deliver results. Our Meta Ads campaign had a 5x ROAS. Anamika is a true marketing expert!"</p>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                            <img src="images/client3.jpg" alt="Kamal Hassan" class="w-full h-full object-cover">
+                            <img src="images/client3.jpg" alt="Kamal Hassan - Marketing Head, GreenLife" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-semibold text-gray-800 text-sm">Kamal Hassan</h4>
@@ -544,53 +644,66 @@
             <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div>
                     <div class="w-24 h-24 rounded-full bg-white shadow-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-envelope-open-text text-primary text-3xl"></i>
+                        <i class="fas fa-calendar-check text-primary text-3xl"></i>
                     </div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">Let's create something <span class="text-primary">amazing together!</span> <span class="text-secondary">&#x2764;&#xFE0F;</span></h2>
-                    <p class="text-gray-500 text-base md:text-lg leading-relaxed">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">Let's create something <span class="text-primary">amazing together!</span></h2>
+                    <p class="text-gray-500 text-base md:text-lg leading-relaxed mb-6">Book a free 15-minute strategy call or send me a message. I'd love to hear from you.</p>
+                    <a href="https://wa.me/8801811805342" target="_blank" class="inline-flex items-center gap-3 bg-[#25D366] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#20BD5A] transition hover:shadow-lg">
+                        <i class="fab fa-whatsapp text-xl"></i> Chat on WhatsApp
+                    </a>
                 </div>
                 <div class="bg-white p-8 rounded-3xl shadow-xl">
-                    <div class="space-y-5 mb-8">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-primary-light flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-envelope text-primary"></i>
-                            </div>
-                            <span class="text-gray-700 text-sm md:text-base">anamikayasmin6@gmail.com</span>
+                    <form id="contactForm" class="space-y-5">
+                        <div>
+                            <input type="text" placeholder="Your Name" required class="w-full px-5 py-3.5 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition text-sm">
                         </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-primary-light flex items-center justify-center flex-shrink-0">
-                                <i class="fab fa-whatsapp text-primary"></i>
-                            </div>
-                            <span class="text-gray-700 text-sm md:text-base">+880 1811-805342</span>
+                        <div>
+                            <input type="email" placeholder="Your Email" required class="w-full px-5 py-3.5 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition text-sm">
                         </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-primary-light flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-phone text-primary"></i>
-                            </div>
-                            <span class="text-gray-700 text-sm md:text-base">+880 1811-805342</span>
+                        <div>
+                            <select required class="w-full px-5 py-3.5 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition text-sm text-gray-500">
+                                <option value="" disabled selected>Select Project Type</option>
+                                <option value="seo">SEO Optimization</option>
+                                <option value="social">Social Media Marketing</option>
+                                <option value="ads">Meta Ads / PPC</option>
+                                <option value="email">Email Marketing</option>
+                                <option value="full">Full Digital Marketing</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-primary-light flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-primary"></i>
+                        <div>
+                            <textarea placeholder="Tell me about your project..." rows="4" class="w-full px-5 py-3.5 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition text-sm resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="flex items-center justify-center gap-2 w-full bg-primary text-white py-4 rounded-full font-semibold hover:bg-primary-dark transition hover:shadow-lg hover:shadow-primary/30">
+                            Send Message <i class="fas fa-paper-plane text-sm"></i>
+                        </button>
+                    </form>
+                    <div class="mt-6 pt-6 border-t border-gray-100">
+                        <div class="space-y-3">
+                            <a href="mailto:anamikayasmin6@gmail.com" class="flex items-center gap-3 text-gray-600 hover:text-primary transition text-sm">
+                                <i class="fas fa-envelope w-5"></i> anamikayasmin6@gmail.com
+                            </a>
+                            <a href="tel:+8801811805342" class="flex items-center gap-3 text-gray-600 hover:text-primary transition text-sm">
+                                <i class="fas fa-phone w-5"></i> +880 1811-805342
+                            </a>
+                            <div class="flex items-center gap-3 text-gray-600 text-sm">
+                                <i class="fas fa-map-marker-alt w-5"></i> Dhaka, Bangladesh
                             </div>
-                            <span class="text-gray-700 text-sm md:text-base">Dhaka, Bangladesh</span>
                         </div>
                     </div>
-                    <a href="mailto:anamikayasmin6@gmail.com" class="flex items-center justify-center gap-2 w-full bg-primary text-white py-4 rounded-full font-semibold hover:bg-primary-dark transition hover:shadow-lg hover:shadow-primary/30">
-                        Let's Talk <i class="fas fa-paper-plane text-sm"></i>
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-12 pb-6">
+    <footer class="bg-gray-900 text-white pt-12 pb-24 md:pb-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
                 <div class="col-span-2 md:col-span-1">
-                    <h3 class="text-xl font-bold mb-2">Anamika Yasmin <span class="text-secondary">&#x2764;&#xFE0F;</span></h3>
-                    <p class="text-gray-400 text-xs tracking-widest">DIGITAL MARKETER</p>
+                    <h3 class="text-xl font-bold mb-2">Anamika Yasmin</h3>
+                    <p class="text-gray-400 text-xs tracking-widest mb-3">DIGITAL MARKETER & GROWTH STRATEGIST</p>
+                    <p class="text-gray-500 text-sm">Serving clients in Dhaka, Bangladesh & globally.</p>
                 </div>
                 <div>
                     <h4 class="font-semibold mb-4 text-sm">Quick Links</h4>
@@ -612,11 +725,11 @@
                 <div>
                     <h4 class="font-semibold mb-4 text-sm">Let's Connect</h4>
                     <div class="flex flex-wrap gap-3">
+                        <a href="https://www.linkedin.com/in/anamikayasminofficial" target="_blank" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.facebook.com/anamikayasminofficial" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/in/anamikayasminofficial" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.instagram.com/anamikayasminofficial" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.tiktok.com/@anamika.yasmin" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/8801811805342" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/8801811805342" target="_blank" class="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center text-white hover:bg-[#20BD5A] transition"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -625,6 +738,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/8801811805342" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+
+    <!-- Sticky CTA for Mobile -->
+    <div class="sticky-cta">
+        <a href="#contact" class="flex items-center justify-center gap-2 w-full bg-primary text-white py-3 rounded-full font-semibold hover:bg-primary-dark transition">
+            Book a Free Strategy Call <i class="fas fa-calendar text-sm"></i>
+        </a>
+    </div>
 
     <script>
         // Mobile Menu Toggle
@@ -645,7 +770,6 @@
             }
         });
 
-        // Close mobile menu on link click
         document.querySelectorAll('#mobileMenu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -703,6 +827,36 @@
             observer.observe(el);
         });
 
+        // Counter Animation
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.counter');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        if (!target) return;
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.textContent = Math.ceil(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        };
+                        updateCounter();
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const trustBar = document.querySelector('.grid.grid-cols-2.md\\:grid-cols-4');
+        if (trustBar) counterObserver.observe(trustBar);
+
         // Navbar shadow on scroll
         const navbar = document.querySelector('nav');
         window.addEventListener('scroll', () => {
@@ -712,6 +866,27 @@
                 navbar.classList.remove('shadow-md');
             }
         });
+
+        // Contact Form Handler
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                const name = contactForm.querySelector('input[type="text"]').value;
+                const email = contactForm.querySelector('input[type="email"]').value;
+                const projectType = contactForm.querySelector('select').value;
+                const message = contactForm.querySelector('textarea').value;
+
+                // Construct mailto link
+                const subject = encodeURIComponent(`Project Inquiry from ${name}`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nProject Type: ${projectType}\n\nMessage:\n${message}`);
+                window.location.href = `mailto:anamikayasmin6@gmail.com?subject=${subject}&body=${body}`;
+
+                alert('Opening your email client... Thank you!');
+                contactForm.reset();
+            });
+        }
     </script>
 </body>
 </html>
